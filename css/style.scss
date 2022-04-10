@@ -80,11 +80,11 @@ body {
 }
 
 .section-title {
-    font-weight: 700;
-    font-size: 40px;
-    @include adaptiv-font(40, 20);
-    line-height: 112%;
-    color: $fontColor;
+	font-weight: 700;
+	font-size: 40px;
+	@include adaptiv-font(40, 20);
+	line-height: 112%;
+	color: $fontColor;
 }
 
 .button {
@@ -103,6 +103,17 @@ body {
 	&:active {
 		background-color: #ffffff;
 		color: $mainColor;
+		border: 1px solid $mainColor;
+	}
+}
+
+.button-reverse {
+    background-color: #ffffff;
+	color: $mainColor;
+	border: 1px solid #ffffff;
+    &:hover,
+	&:focus,
+	&:active {
 		border: 1px solid $mainColor;
 	}
 }
@@ -435,168 +446,203 @@ body {
 }
 
 .statistic {
-    margin-bottom: 94px;
-    &__container {
-        max-width: 1240px;
-        display: flex;
-        align-items: center;
-    }
+	margin-bottom: 94px;
+	&__container {
+		max-width: 1240px;
+		display: flex;
+		align-items: center;
+	}
 
-    &__col {
-        flex-basis: 50%;
-    }
+	&__col {
+		flex-basis: 50%;
+	}
 
-    &__title {
-        max-width: 500px;
-        margin-bottom: 58px;
-    }
+	&__title {
+		max-width: 500px;
+		margin-bottom: 58px;
+	}
 
-    &__links {
-        display: flex;
-        gap: 22px;
-        align-items: flex-end; 
-        flex-wrap: wrap;
-        margin-bottom: 56px;
-    }
+	&__links {
+		display: flex;
+		gap: 22px;
+		align-items: flex-end;
+		flex-wrap: wrap;
+		margin-bottom: 56px;
+	}
 
-    &__text {
-        font-size: 15px;
-        line-height: 200%;
-        margin-bottom: 7px;
-    }
+	&__text {
+		font-size: 15px;
+		line-height: 200%;
+		margin-bottom: 7px;
+	}
 
-    &__link {
-        font-size: 15px;
-        line-height: 100%;
-        color: #000000;
-        text-decoration: underline;
-    }
+	&__link {
+		font-size: 15px;
+		line-height: 100%;
+		color: #000000;
+		text-decoration: underline;
+	}
 
-    &__wrapper {
-        display: flex;
-        flex-wrap: wrap;
-    }
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+	}
 
-    &__item {
-        flex-basis: 50%;
-        min-height: 200px;
-        padding: 8px 16px;
-        border-left: 1px solid #E0E0E0;
-        &_value {
-            font-weight: 700;
-            font-size: 40px;
-            @include adaptiv-font(40, 20);
-            line-height: 112%;
-            margin-bottom: 15px;
-        }
+	&__item {
+		flex-basis: 50%;
+		min-height: 200px;
+		padding: 8px 16px;
+		border-left: 1px solid #e0e0e0;
+		&_value {
+			font-weight: 700;
+			font-size: 40px;
+			@include adaptiv-font(40, 20);
+			line-height: 112%;
+			margin-bottom: 15px;
+		}
 
-        &_desc {
-            max-width: 220px;
-            @include adaptiv-font(15, 12);
-            line-height: 147%;
-        }
-    }
+		&_desc {
+			max-width: 220px;
+			@include adaptiv-font(15, 12);
+			line-height: 147%;
+		}
+	}
 }
 
-@media(max-width: 991px) {
-    .statistic {
-        &__item {     
-            min-height: 160px;
-        }
-    }
+@media (max-width: 991px) {
+	.statistic {
+		&__item {
+			min-height: 160px;
+		}
+	}
 }
 
-@media(max-width: 767px) {
-    .statistic {
-        &__container {
-            flex-direction: column;
-            align-items: stretch;
-            row-gap: 50px;
-        }
-        &__item {     
-            min-height: 140px;
-        }
-    }  
+@media (max-width: 767px) {
+	.statistic {
+		&__container {
+			flex-direction: column;
+			align-items: stretch;
+			row-gap: 50px;
+		}
+		&__item {
+			min-height: 140px;
+		}
+	}
 }
 
 .benefits {
-    margin-bottom: 91px;
-    &__container {
-        max-width: 1130px;
+	margin-bottom: 91px;
+	&__container {
+		max-width: 1130px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		margin-bottom: 22px;
+	}
+
+	&__text {
+		@include adaptiv-font(18, 16);
+		line-height: 157%;
+		margin-bottom: 58px;
+	}
+
+	&__wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
+	}
+
+	&__item {
+		max-width: 316px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&_logo {
+			margin-bottom: 42px;
+			max-width: 50px;
+			img {
+				width: 100%;
+				object-fit: contain;
+			}
+		}
+
+		&_title {
+			@include adaptiv-font(19, 17);
+			font-weight: 700;
+			line-height: 121%;
+			margin-bottom: 16px;
+		}
+
+		&_text {
+			@include adaptiv-font(15, 13);
+			line-height: 100%;
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.benefits {
+		&__item {
+			&_logo {
+				margin-bottom: 32px;
+				max-width: 40px;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.benefits {
+		&__wrapper {
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 30px;
+		}
+		&__item {
+			&_logo {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+.demo {
+	padding: 94px 0 101px;
+    background-color: #F5F5F5;
+	&__container {
+        max-width:996px;
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
+	}
 
-    &__title {
-        margin-bottom: 22px;
-    }
+	&__title {
+        margin-bottom: 28px;
+	}
 
-    &__text {
-        @include adaptiv-font(18, 16);
-        line-height: 157%;
-        margin-bottom: 58px;
-    }
+	&__text {
+        @include adaptiv-font(15, 13);
+        line-height: 200%;
+        margin-bottom: 50px;
+	}
 
-    &__wrapper {
-        width: 100%;
+	&__img {
+        max-width: 996px;
+        margin-bottom: 36px;
+        img {
+            width: 100%;
+        }
+	}
+
+	&__buttons {
         display: flex;
-        justify-content: space-between;
-        gap: 10px;
-    }
-
-    &__item {
-        max-width: 316px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        &_logo {
-            margin-bottom: 42px;
-            max-width: 50px;
-            img {
-                width: 100%;
-                object-fit: contain;
-            }
-        }
-
-        &_title {
-            @include adaptiv-font(19, 17);
-            font-weight: 700;
-            line-height: 121%;
-            margin-bottom: 16px;
-        }
-
-        &_text {
-            @include adaptiv-font(15, 13);
-            line-height: 100%;
-            text-align: center;
-        }
-    }
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 22px;
+	}
 }
-
-@media(max-width: 991px) {
-    .benefits { 
-        &__item {
-            &_logo {
-                margin-bottom: 32px;
-                max-width: 40px;
-            }
-        }
-    }
-}
-
-@media(max-width: 480px) {
-    .benefits { 
-        &__wrapper {
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-        }
-        &__item {
-            &_logo {
-                margin-bottom: 10px;
-            }
-        }
-    }
-}
-

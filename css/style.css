@@ -87,6 +87,15 @@ body {
   border: 1px solid #6f2cff;
 }
 
+.button-reverse {
+  background-color: #ffffff;
+  color: #6f2cff;
+  border: 1px solid #ffffff;
+}
+.button-reverse:hover, .button-reverse:focus, .button-reverse:active {
+  border: 1px solid #6f2cff;
+}
+
 .email-form {
   font-size: 0;
   display: -webkit-box;
@@ -418,7 +427,7 @@ body {
       flex-basis: 50%;
   min-height: 200px;
   padding: 8px 16px;
-  border-left: 1px solid #E0E0E0;
+  border-left: 1px solid #e0e0e0;
 }
 .statistic__item_value {
   font-weight: 700;
@@ -539,6 +548,49 @@ body {
   .benefits__item_logo {
     margin-bottom: 10px;
   }
+}
+.demo {
+  padding: 94px 0 101px;
+  background-color: #F5F5F5;
+}
+.demo__container {
+  max-width: 996px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.demo__title {
+  margin-bottom: 28px;
+}
+.demo__text {
+  font-size: calc( 13px + 2 * ((100vw - 320px) / 1120) );
+  line-height: 200%;
+  margin-bottom: 50px;
+}
+.demo__img {
+  max-width: 996px;
+  margin-bottom: 36px;
+}
+.demo__img img {
+  width: 100%;
+}
+.demo__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 22px;
 }
 
 /*# sourceMappingURL=style.css.map */
