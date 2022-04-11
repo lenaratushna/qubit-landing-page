@@ -612,7 +612,7 @@ body {
 }
 
 .demo {
-	padding: 94px 0 101px;
+	padding: 90px 0;
     background-color: #F5F5F5;
 	&__container {
         max-width:996px;
@@ -644,5 +644,80 @@ body {
         justify-content: center;
         flex-wrap: wrap;
         gap: 22px;
+	}
+}
+
+.services {
+    padding: 90px 0;
+    &__container {
+        max-width: 1130px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+    }
+
+    &__title {
+        margin-bottom: 58px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 99px 100px;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        max-width: 276px;
+        display: flex;
+        flex-direction: column;
+		align-items: center;
+        &_logo {
+            margin-bottom: 4px;
+            max-width: 50px;
+			img {
+				width: 100%;
+				object-fit: contain;
+			}
+        }
+
+        &_title {
+            @include adaptiv-font(19, 17);
+			font-weight: 700;
+			line-height: 137%;
+			margin-bottom: 11px;
+        }
+
+        &_text {
+            @include adaptiv-font(15, 13);
+			line-height: 147%;
+			text-align: center;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+	.services {
+		&__item {
+			&_logo {
+				max-width: 40px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.services {
+		&__wrapper {
+            gap: 99px 40px;
+        }
+	}
+}
+
+@media (max-width: 480px) {
+	.services {
+		&__wrapper {
+            gap: 60px 40px;
+        }
 	}
 }
