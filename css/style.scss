@@ -721,3 +721,56 @@ body {
         }
 	}
 }
+
+.brands {
+    padding: 88px 0;
+    background-color: #F5F5F5;
+    &__container {
+        max-width: 1146px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title {
+        margin-bottom: 75px;
+    }
+    .slider {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        &__slide {
+            max-width: 320px;
+            min-height: 400px;
+            text-align: center;
+            border-radius: 7px;
+            background-color: #ffffff;
+            &_img {
+                margin-bottom: 25px;
+                width: 100%;
+            }
+    
+            &_logo {
+                margin-bottom: 25px;
+            }
+    
+            &_text {
+                font-weight: 700;
+                @include adaptiv-font(18, 16);
+                font-size: 18px;
+                line-height: 122%;
+                color: $mainColor;
+                padding: 0 35px;
+            }
+        }
+    } 
+}
+
+@media(max-width: 380px) {
+    .brands {
+        .slider {
+            &__slide {
+                max-width: 250px;
+            }
+        } 
+    }
+} 
