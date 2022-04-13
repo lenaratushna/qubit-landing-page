@@ -726,7 +726,7 @@ body {
     padding: 88px 0;
     background-color: #F5F5F5;
     &__container {
-        max-width: 1146px;
+        max-width: 1070px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -738,6 +738,11 @@ body {
         width: 100%;
         display: flex;
         align-items: center;
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: $mainColor;
+            
+        } 
         &__slide {
             max-width: 320px;
             min-height: 400px;
@@ -765,8 +770,27 @@ body {
     } 
 }
 
+@media(max-width: 767px) {
+    .brands {
+        &__container {
+            max-width: 690px;
+        }
+    }
+} 
+
+@media(max-width: 480px) {
+    .brands {
+        &__container {
+            max-width: 350px;
+        }
+    }
+} 
+
 @media(max-width: 380px) {
     .brands {
+        &__container {
+            max-width: 280px;
+        }
         .slider {
             &__slide {
                 max-width: 250px;

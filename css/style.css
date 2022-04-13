@@ -677,7 +677,7 @@ body {
   background-color: #F5F5F5;
 }
 .brands__container {
-  max-width: 1146px;
+  max-width: 1070px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -700,6 +700,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.brands .slider .swiper-button-prev,
+.brands .slider .swiper-button-next {
+  color: #6f2cff;
 }
 .brands .slider__slide {
   max-width: 320px;
@@ -724,7 +728,20 @@ body {
   padding: 0 35px;
 }
 
+@media (max-width: 767px) {
+  .brands__container {
+    max-width: 690px;
+  }
+}
+@media (max-width: 480px) {
+  .brands__container {
+    max-width: 350px;
+  }
+}
 @media (max-width: 380px) {
+  .brands__container {
+    max-width: 280px;
+  }
   .brands .slider__slide {
     max-width: 250px;
   }
