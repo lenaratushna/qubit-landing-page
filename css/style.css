@@ -746,5 +746,94 @@ body {
     max-width: 250px;
   }
 }
+.industries {
+  padding: 94px 0;
+}
+.industries__container {
+  max-width: 980px;
+}
+.industries__title {
+  margin-bottom: 12px;
+  text-align: center;
+}
+.industries__text {
+  font-size: calc( 16px + 2 * ((100vw - 320px) / 1120) );
+  line-height: 167%;
+  text-align: center;
+  margin-bottom: 65px;
+}
+.industries__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+
+.industry {
+  width: 460px;
+  background-color: #17002E;
+  border-radius: 8px 10px 10px 8px;
+  padding: 30px 30px 22px;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.industry__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  font-size: calc( 16px + 2 * ((100vw - 320px) / 1120) );
+  margin-bottom: 18px;
+}
+.industry__title img {
+  margin-right: 20px;
+}
+.industry__text {
+  font-size: calc( 13px + 2 * ((100vw - 320px) / 1120) );
+  line-height: 147%;
+  margin-bottom: 8px;
+}
+.industry__link {
+  font-size: calc( 13px + 2 * ((100vw - 320px) / 1120) );
+  color: #FFFFFF;
+  padding: 0 20px 7px 0;
+  border-bottom: 2px solid #fff;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+.industry__link:hover, .industry__link:focus, .industry__link:active {
+  border-bottom: 2px solid #6f2cff;
+}
+
+@media (max-width: 1048px) {
+  .industry {
+    width: 46%;
+  }
+}
+@media (max-width: 767px) {
+  .industry {
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

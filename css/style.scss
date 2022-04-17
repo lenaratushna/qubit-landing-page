@@ -798,3 +798,82 @@ body {
         } 
     }
 } 
+
+.industries {
+    padding: 94px 0;
+    &__container {
+        max-width: 980px;
+    }
+
+    &__title {
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    &__text {
+        @include adaptiv-font(18, 16);
+        line-height: 167%;
+        text-align: center;
+        margin-bottom: 65px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+
+.industry {
+    width: 460px;
+    background-color: #17002E;
+    border-radius: 8px 10px 10px 8px;
+    padding: 30px 30px 22px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    &__title {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        @include adaptiv-font(18, 16);
+        margin-bottom: 18px;
+        img {
+            margin-right: 20px;
+        }
+    }
+
+    &__text {
+        @include adaptiv-font(15, 13);
+        line-height: 147%;
+        margin-bottom: 8px;
+    }
+
+    &__link {
+        @include adaptiv-font(15, 13);
+        color: #FFFFFF;
+        padding: 0 20px 7px 0;
+        border-bottom: 2px solid #fff;
+        transition: all 0.7s ease-in-out;
+        &:hover,
+        &:focus,
+	    &:active {
+            border-bottom: 2px solid $mainColor;
+        }
+    }
+}
+
+@media(max-width: 1048px) {
+    .industry {
+        width: 46%;
+    }
+}
+
+@media(max-width: 767px) {
+    .industry {
+        width: 100%;
+    }
+}
