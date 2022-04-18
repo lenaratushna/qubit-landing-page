@@ -877,3 +877,59 @@ body {
         width: 100%;
     }
 }
+
+.ecosystem {
+    background-color: #F5F5F5;
+    padding: 40px 0;
+    &__container {
+        max-width: 1250px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__content {
+        max-width: 588px;
+    }
+
+    &__title {
+        margin-bottom: 47px;
+    }
+
+    &__text {
+        font-size: 13px;
+        line-height: 231%;
+        color: #000000;
+        margin-bottom: 74px;
+        p:not(:last-child) {
+            margin-bottom: 11px;
+        }
+    }
+
+    &__img {
+        max-width: 567px;
+        img {
+            width: 100%;
+            object-fit: contain;
+        };
+    }
+}
+
+@media(max-width: 767px) {
+    .ecosystem {
+        &__container {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}
+
+@media(max-width: 480px) {
+    .ecosystem {
+        &__text {
+            margin-bottom: 44px;
+        }
+    }
+}
+
+
