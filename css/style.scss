@@ -945,3 +945,32 @@ body {
         margin-bottom: 39px;
     }
 }
+
+.social-media {
+    padding: 29px 0 40px;
+    &__container {
+        max-width: 1140px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__text {
+        @include adaptiv-font(16, 14);
+        line-height: 281%;
+        margin-bottom: 28px;
+    }
+
+    &__list {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    &__item {
+        transition: all 0.5s ease-in-out;
+        &:hover, &:focus, &:active {
+            transform: scale(1.2);
+        }
+    }
+}
