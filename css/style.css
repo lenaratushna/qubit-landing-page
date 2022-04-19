@@ -889,5 +889,16 @@ body {
     margin-bottom: 44px;
   }
 }
-
+.book-demo {
+  padding: 90px 0;
+  background: url(../images/demo-bg.jpg) no-repeat center center/cover;
+}
+.book-demo__container {
+  max-width: 485px;
+  text-align: center;
+}
+.book-demo__title {
+  color: #FFFFFF;
+  margin-bottom: 39px;
+}
 /*# sourceMappingURL=style.css.map */
